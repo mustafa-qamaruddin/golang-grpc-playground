@@ -3,10 +3,14 @@ syntax = "proto3";
 package todos;
 option go_package = ".;todos";
 
-message SomeMessage {
+message Todo {
   string id = 1;
   string title = 2;
   string description = 3;
   string assignee = 4;
   string assignedBy = 5;
+}
+
+service Todos {
+  rpc CreateTodo(Todo) returns (Todo) {};
 }
