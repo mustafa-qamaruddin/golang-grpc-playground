@@ -1,4 +1,4 @@
-module grpc-server
+module grpc-client
 
 go 1.18
 
